@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/home_page">
+
+
+    <fragment android:id="@+id/cassatte" android:name="welfare.self_care_task_manager.cassatte"
+              android:label="fragment_cassatte" tools:layout="@layout/fragment_cassatte"/>
+    <fragment android:id="@+id/home_page" android:name="welfare.self_care_task_manager.home_page"
+              android:label="fragment_home_page" tools:layout="@layout/fragment_home_page">
+        <action android:id="@+id/action_home_page_to_cassatte" app:destination="@id/cassatte"/>
+    </fragment>
+</navigation>
