@@ -3,7 +3,7 @@
                                                    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
-                                                   tools:context=".home_page">
+                                                   tools:context=".HomePage">
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="349dp"
             android:layout_height="358dp"
@@ -56,4 +56,13 @@
             android:layout_marginEnd="1dp" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="1dp" app:layout_constraintHorizontal_bias="0.265"
             app:layout_constraintVertical_bias="0.0"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/testText"
+            app:layout_constraintStart_toEndOf="@+id/toLastCard" android:layout_marginStart="1dp"
+            app:layout_constraintEnd_toStartOf="@+id/toNextCard" android:layout_marginEnd="1dp"
+            tools:ignore="MissingConstraints" app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="1dp"
+            app:layout_constraintHorizontal_bias="0.484" app:layout_constraintVertical_bias="0.044"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
