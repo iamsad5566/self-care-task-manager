@@ -42,7 +42,7 @@ class HomePage : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val txt = view.findViewById<TextView>(R.id.testText)
-        var acc = 0
+        var acc: Int = 0
 
         val btnLast = view.findViewById<ImageButton>(R.id.toLastCard)
         val btnNext = view.findViewById<ImageButton>(R.id.toNextCard)
