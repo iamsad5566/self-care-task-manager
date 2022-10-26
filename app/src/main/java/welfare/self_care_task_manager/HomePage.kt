@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -53,6 +54,11 @@ class HomePage : Fragment() {
         btnNext.setOnClickListener{
             acc++
             txt.text = acc.toString()
+        }
+
+        var toCassatte = view.findViewById<ImageButton>(R.id.toCassatte)
+        toCassatte.setOnClickListener {
+            Toast.makeText(view.context, "YO", Toast.LENGTH_SHORT).show()
         }
     }
 
