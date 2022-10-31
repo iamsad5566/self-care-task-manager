@@ -49,5 +49,10 @@ class HomePage : Fragment() {
         toCassatte.setOnClickListener {
             Toast.makeText(view.context, "YO", Toast.LENGTH_SHORT).show()
         }
+
+        val textInScroll = view.findViewById<TextView>(R.id.tv_long)
+        for(i in 1 until 100) {
+            textInScroll.append("Hello world new Text!\n")
+        }
     }
 }

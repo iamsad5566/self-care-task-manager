@@ -108,25 +108,14 @@
             app:layout_constraintTop_toTopOf="@+id/progressBar" android:layout_marginTop="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
 
+
             tools:ignore="SpeakableTextPresentCheck" app:layout_constraintVertical_bias="0.0">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical">
-            <TextView
-                    android:id="@+id/tv_long"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:gravity="center"
-                    android:text="really_long_string" tools:ignore="HardcodedText"/>
-            <TextView
-                    android:text="TextView"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="47dp" android:id="@+id/textView4"/>
-            <TextView
-                    android:text="TextView"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="47dp" android:id="@+id/textView5"/>
-        </LinearLayout>
+        <TextView
+          android:id="@+id/tv_long"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:gravity="center"
+          android:text="really_long_string" tools:ignore="HardcodedText"/>
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
