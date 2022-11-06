@@ -2,13 +2,13 @@ package welfare.self_care_task_manager
 
 import android.app.Activity
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import androidx.core.view.setPadding
 import androidx.navigation.Navigation
 
 /**
@@ -38,10 +38,10 @@ class HomePage : Fragment() {
 
         val btnLast = view.findViewById<ImageButton>(R.id.toLastCard)
         val btnNext = view.findViewById<ImageButton>(R.id.toNextCard)
-        btnLast.setOnClickListener{
+        btnLast.setOnClickListener {
             Toast.makeText(view.context, "param1", Toast.LENGTH_SHORT).show()
         }
-        btnNext.setOnClickListener{
+        btnNext.setOnClickListener {
             Toast.makeText(view.context, "param2", Toast.LENGTH_SHORT).show()
         }
 
@@ -50,9 +50,14 @@ class HomePage : Fragment() {
             Toast.makeText(view.context, "YO", Toast.LENGTH_SHORT).show()
         }
 
-        val textInScroll = view.findViewById<TextView>(R.id.tv_long)
-        for(i in 1 until 100) {
-            textInScroll.append("Hello world new Text!\n")
+        // Call an API to retrieve the ongoing to-do list
+        val textInScroll = view.findViewById<LinearLayout>(R.id.innerLayout)
+        for (i in 1 until 50) {
+            val textView = TextView(view.context)
+            textView.text = "Hello world new Text!"
+            textView.setPadding(10)
+            textView.gravity = Gravity.CENTER
+            textInScroll.addView(textView)
         }
     }
 }

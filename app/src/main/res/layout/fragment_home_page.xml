@@ -100,22 +100,26 @@
             android:layout_height="wrap_content" android:id="@+id/textView2"
             app:layout_constraintStart_toEndOf="@+id/round" android:layout_marginStart="16dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/progressBar"
-            app:layout_constraintHorizontal_bias="0.087" android:layout_marginBottom="20dp"/>
+            app:layout_constraintHorizontal_bias="0.087" android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText"/>
     <ScrollView
             android:layout_width="400dp"
             android:layout_height="348dp"
+            android:id="@+id/scrollHome"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/progressBar" android:layout_marginTop="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
 
 
-            tools:ignore="SpeakableTextPresentCheck" app:layout_constraintVertical_bias="0.0">
-        <TextView
-          android:id="@+id/tv_long"
-          android:layout_width="match_parent"
-          android:layout_height="48dp"
-          android:gravity="center"
-          android:text="really_long_string" tools:ignore="HardcodedText"/>
+            app:layout_constraintVertical_bias="0.0" tools:ignore="SpeakableTextPresentCheck">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:id="@+id/innerLayout"
+                android:layout_height="wrap_content">
+
+        </LinearLayout>
 
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
